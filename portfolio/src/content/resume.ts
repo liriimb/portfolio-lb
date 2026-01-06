@@ -105,7 +105,6 @@ export const resume = {
       "Clean Architecture",
       "Entity Framework Core",
       "JWT + Cookies Auth",
-      "SMTP/Email",
     ],
     frontend: ["Next.js", "React", "TypeScript", "Axios"],
     tools: ["Git", "Azure (team environment)"],
