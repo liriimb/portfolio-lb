@@ -1,6 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import type { Resume } from "@/content/resume";
 import Container from "@/components/shared/Container";
+import HoverCard from "@/components/shared/HoverCard";
 
 export default function Highlights({ data }: { data: Resume }) {
   return (
@@ -8,10 +9,7 @@ export default function Highlights({ data }: { data: Resume }) {
       <Container>
         <div className="grid gap-4 sm:grid-cols-3">
           {data.highlights.map((h) => (
-            <Card
-              key={h.label}
-              className="transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-foreground/20"
-            >
+            <HoverCard key={h.label}>
               <CardContent className="p-5">
                 <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                   {h.label}
@@ -20,7 +18,7 @@ export default function Highlights({ data }: { data: Resume }) {
                   {h.value}
                 </p>
               </CardContent>
-            </Card>
+            </HoverCard>
           ))}
         </div>
       </Container>

@@ -1,4 +1,5 @@
 import type { Resume } from "@/content/resume";
+import { SITE } from "@/content/site";
 import LinkButton from "@/components/shared/LinkButton";
 import GlowLink from "@/components/shared/GlowLink";
 
@@ -15,7 +16,7 @@ export default function Hero({ data }: { data: Resume }) {
         </h1>
 
         <p className="mt-3 text-lg text-muted-foreground">
-          {data.title} • Building clean APIs + production UIs
+          {data.title} • {SITE.heroSubtitleSuffix}
         </p>
 
         <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
