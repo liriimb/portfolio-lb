@@ -12,7 +12,7 @@ export default function TechBadge({
     <Badge
       variant="secondary"
       className={cn(
-        "transition-all duration-200 hover:scale-[1.06] hover:shadow-md hover:!bg-foreground hover:!text-background",
+        "select-none cursor-default transition-all duration-200 hover:scale-[1.06] hover:shadow-md hover:!bg-foreground hover:!text-background",
         className,
       )}
     >

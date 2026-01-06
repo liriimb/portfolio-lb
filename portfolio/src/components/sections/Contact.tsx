@@ -9,7 +9,7 @@ export default function Contact({ data }: { data: Resume }) {
     <Section id="contact" title="Contact">
       <Card className="transition-all duration-200 hover:shadow-xl hover:border-foreground/25">
         <CardContent className="p-6">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground select-none cursor-default">
             Fastest way to reach me: email. You can also copy my contact details
             with one click.
           </p>

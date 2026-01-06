@@ -33,7 +33,7 @@ export default function CopyButton({
       type="button"
       onClick={onCopy}
       className={cn(
-        "rounded-md border border-foreground/25 px-3 py-2 text-sm font-medium transition-all hover:-translate-y-[1px] hover:border-foreground/60 hover:bg-foreground hover:text-background hover:shadow-md active:translate-y-[1px]",
+        "cursor-pointer select-none rounded-md border border-foreground/25 px-3 py-2 text-sm font-medium transition-all hover:-translate-y-[1px] hover:border-foreground/60 hover:bg-foreground hover:text-background hover:shadow-md active:translate-y-[1px]",
         className,
       )}
     >

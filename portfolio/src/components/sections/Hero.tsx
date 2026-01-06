@@ -1,7 +1,7 @@
 import type { Resume } from "@/content/resume";
 import { SITE } from "@/content/site";
-import LinkButton from "@/components/shared/LinkButton";
 import GlowLink from "@/components/shared/GlowLink";
+import FillButton from "@/components/shared/FillButton";
 
 export default function Hero({ data }: { data: Resume }) {
   const telHref = `tel:${data.phone.replace(/\s/g, "")}`;
@@ -24,17 +24,9 @@ export default function Hero({ data }: { data: Resume }) {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <LinkButton
-            href={`mailto:${data.email}`}
-            variant="outline"
-            external={false}
-          >
-            Email
-          </LinkButton>
+          <FillButton href={`mailto:${data.email}`}>Email</FillButton>
 
-          <LinkButton href={telHref} variant="outline" external={false}>
-            Call
-          </LinkButton>
+          <FillButton href={telHref}>Call</FillButton>
 
           <GlowLink href={data.links.linkedin} label="LinkedIn" />
           <GlowLink href={data.links.github} label="GitHub" />

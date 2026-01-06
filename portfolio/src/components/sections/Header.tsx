@@ -2,6 +2,7 @@ import LinkButton from "@/components/shared/LinkButton";
 import { NAV_LINKS } from "@/content/nav";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Menu } from "lucide-react";
+import Logo from "@/components/shared/Logo";
 
 export default function Header({ email }: { email: string }) {
   return (
@@ -9,12 +10,12 @@ export default function Header({ email }: { email: string }) {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <a
           href="#top"
-          className="rounded-md px-2 py-1 font-semibold tracking-tight transition-colors hover:bg-muted"
+          aria-label="Go to top"
+          className="rounded-md transition-colors hover:bg-muted cursor-pointer"
         >
-          LB
+          <Logo />
         </a>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground sm:flex">
           {NAV_LINKS.map((l) => (
             <a
@@ -28,9 +29,7 @@ export default function Header({ email }: { email: string }) {
           ))}
         </nav>
 
-        {/* Right side: mobile menu + email */}
         <div className="flex items-center gap-2">
-          {/* Mobile menu */}
           <div className="sm:hidden">
             <DropdownMenu.Root>
               <DropdownMenu.Trigger asChild>
@@ -64,13 +63,12 @@ export default function Header({ email }: { email: string }) {
             </DropdownMenu.Root>
           </div>
 
-          {/* Email button */}
           <LinkButton
             href={`mailto:${email}`}
             variant="outline"
             external={false}
           >
-            Email
+            Contact Me
           </LinkButton>
         </div>
       </div>
