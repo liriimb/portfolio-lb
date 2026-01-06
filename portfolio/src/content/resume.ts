@@ -1,6 +1,6 @@
 export const resume = {
   name: "Lirim Bajrami",
-  title: "Full Stack Developer (Backend-Focused)",
+  title: "Full Stack Developer",
   location: "Skopje, North Macedonia",
   email: "lirim.bajram@outlook.com",
   phone: "+389 070 633 398",
@@ -9,17 +9,22 @@ export const resume = {
     linkedin: "https://www.linkedin.com/in/lirimbajrami/",
   },
   summary:
-    "Full Stack Developer with 1+ year full-time on-site experience at Waves Digital, delivering ASP.NET Core Web APIs using Clean Architecture and SQL-backed systems, and shipping production UI with Next.js/React + TypeScript.",
+    "Full-Stack Developer with 1+ year full-time on-site experience at Waves Digital, building ASP.NET Core Web APIs with Clean Architecture and shipping production UIs in Next.js/React + TypeScript.",
   highlights: [
-    { label: "Full-time experience", value: "1+ year (Waves Digital)" },
-    { label: "Screens shipped", value: "20+ production screens" },
-    { label: "Backend features", value: "10–12 API endpoints" },
+    { label: "Experience", value: "1+ year (Waves Digital)" },
+    { label: "Production UI", value: "20+ screens shipped" },
+    { label: "Backend", value: "10–12 API endpoints delivered" },
   ],
   projects: [
     {
       name: "SafeTrail — Car Insurance Web App",
+      tagline:
+        "Full-stack car insurance claims app with role-based review workflows, vehicle ownership rules, and evidence handling.",
       status: "Finished (not deployed)",
-      links: { github: "PUT_REPO_LINK_HERE", live: "" },
+      links: {
+        github: "https://github.com/liriimb/SafeTrail-CarInsurance",
+        live: "",
+      },
       stack: [
         "ASP.NET Core MVC",
         "ASP.NET Identity",
@@ -29,15 +34,21 @@ export const resume = {
         "Repository Pattern",
       ],
       bullets: [
-        "Role-based auth (User + Agent/Admin).",
-        "Claims tied to user-owned vehicles; Agents review and manage outcomes.",
-        "Single-Car vs Multi-Car restrictions with UI + backend validation.",
+        "Built role-based authentication/authorization (User vs Agent) to manage claim review and outcomes.",
+        "Implemented claims tied to user-owned vehicles with clean relational modeling (User ↔ Cars ↔ Claims).",
+        "Added single-car vs multi-car rules with backend validation and conditional UI behavior.",
+        "Implemented evidence file uploads with unique naming, size limits, and stored metadata.",
       ],
     },
     {
       name: "MediLink (API + UI)",
+      tagline:
+        "Healthcare appointment platform API designed for clinics, doctors, schedules, and booking workflows.",
       status: "In progress",
-      links: { github: "PUT_REPO_LINK_HERE", live: "" },
+      links: {
+        github: "https://github.com/liriimb/mediLink-API",
+        live: "",
+      },
       stack: [
         "ASP.NET Core Web API",
         "Clean Architecture",
@@ -46,20 +57,31 @@ export const resume = {
         "TypeScript",
       ],
       bullets: [
-        "Healthcare platform for clinics/doctors by specialty, hours, and profiles.",
-        "Appointment booking workflows (online/in-person) consuming REST APIs end-to-end.",
-        "Designed for growth (~15–20+ planned endpoints across schedules/bookings/profiles).",
+        "Designed a scalable REST API structure for clinics/doctors by specialty, profiles, and availability.",
+        "Implemented appointment booking foundations for online/in-person flows (API-first approach).",
+        "Organized the backend using Clean Architecture principles for maintainability and future expansion.",
+        "Set up SQL Server persistence with models ready for scheduling and booking relationships.",
       ],
     },
     {
       name: "Learning Management System (Waves Digital)",
-      status: "Commercial (private)",
+      tagline:
+        "Production LMS features delivered at Waves Digital: admin dashboards, secured APIs, and data-heavy workflows.",
+      status: "Private",
       links: { github: "", live: "" },
-      stack: ["Next.js", "React", "TypeScript", "ASP.NET Core Web API", "EF Core", "SQL Server"],
+      stack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "ASP.NET Core Web API",
+        "EF Core",
+        "SQL Server",
+      ],
       bullets: [
-        "Delivered 20+ screens across admin + user areas with API-driven workflows.",
-        "Built multiple admin areas to manage organizations, groups, and student records.",
-        "Implemented cookie + JWT auth flow with guarded access patterns.",
+        "Shipped 20+ production screens across admin + user areas with API-driven workflows.",
+        "Built admin modules for organizations, groups, and student records with secure actions.",
+        "Integrated secure API consumption using cookies + JWT patterns across the app.",
+        "Delivered features in a team environment using EF Core + SQL Server and structured backend layers.",
       ],
     },
   ],
@@ -101,5 +123,13 @@ export const resume = {
     program: "BSc Computer Science & Engineering",
     period: "2024 – 2028",
   },
-  languages: ["Albanian (Native)", "Macedonian (Conversational)", "English (Fluent)"],
+  languages: [
+    "Albanian (Native)",
+    "Macedonian (Conversational)",
+    "English (Fluent)",
+  ],
 } as const;
+
+export type Resume = typeof resume;
+export type Project = Resume["projects"][number];
+export type ExperienceItem = Resume["experience"][number];

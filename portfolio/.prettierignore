@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# next build output
+.next
+out
+
+# vercel
+.vercel
+
+# logs
+*.log
+
+# env
+.env
+.env.* 
+
+# misc
+coverage
+dist
