@@ -2,8 +2,8 @@ import Section from "./Section";
 import { CardContent } from "@/components/ui/card";
 import type { Resume } from "@/content/resume";
 import HoverCard from "@/components/shared/HoverCard";
-import ActionLink from "@/components/shared/ActionLink";
 import TechBadge from "@/components/shared/TechBadge";
+import LinkButton from "@/components/shared/LinkButton";
 
 export default function Projects({ data }: { data: Resume }) {
   return (
@@ -28,9 +28,16 @@ export default function Projects({ data }: { data: Resume }) {
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {live ? <ActionLink href={live} label="Live" /> : null}
+                    {live ? (
+                      <LinkButton href={live} variant="outline" external>
+                        Live
+                      </LinkButton>
+                    ) : null}
+
                     {github ? (
-                      <ActionLink href={github} label="GitHub" />
+                      <LinkButton href={github} variant="outline" external>
+                        GitHub
+                      </LinkButton>
                     ) : null}
                   </div>
                 </div>
