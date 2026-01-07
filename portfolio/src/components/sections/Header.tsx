@@ -65,7 +65,7 @@ export default function Header({ email }: { email: string }) {
 
           <LinkButton
             href={`mailto:${email}`}
-            variant="outline"
+            variant="radial"
             external={false}
           >
             Contact Me

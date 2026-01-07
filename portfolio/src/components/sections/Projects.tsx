@@ -29,13 +29,21 @@ export default function Projects({ data }: { data: Resume }) {
 
                   <div className="flex flex-wrap gap-2">
                     {live ? (
-                      <LinkButton href={live} variant="outline" external>
+                      <LinkButton
+                        href={live}
+                        variant="radial"
+                        className="h-9 px-3 py-1.5"
+                      >
                         Live
                       </LinkButton>
                     ) : null}
 
                     {github ? (
-                      <LinkButton href={github} variant="outline" external>
+                      <LinkButton
+                        href={github}
+                        variant="radial"
+                        className="h-9 px-3 py-1.5"
+                      >
                         GitHub
                       </LinkButton>
                     ) : null}

@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import type { Resume } from "@/content/resume";
 import CopyButton from "@/components/shared/CopyButton";
+import LinkButton from "../shared/LinkButton";
 
 export default function Contact({ data }: { data: Resume }) {
   return (
@@ -50,25 +51,13 @@ export default function Contact({ data }: { data: Resume }) {
               <a href={`mailto:${data.email}`}>Email me</a>
             </Button>
 
-            <Button
-              asChild
-              variant="outline"
-              className="transition-all hover:-translate-y-[1px] active:translate-y-[1px] hover:bg-foreground hover:text-background hover:shadow-md"
-            >
-              <a href={data.links.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-            </Button>
+            <LinkButton variant="radial" href={data.links.linkedin}>
+              LinkedIn
+            </LinkButton>
 
-            <Button
-              asChild
-              variant="outline"
-              className="transition-all hover:-translate-y-[1px] active:translate-y-[1px] hover:bg-foreground hover:text-background hover:shadow-md"
-            >
-              <a href={data.links.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            </Button>
+            <LinkButton href={data.links.github} variant="radial">
+              GitHub
+            </LinkButton>
           </div>
         </CardContent>
       </Card>
