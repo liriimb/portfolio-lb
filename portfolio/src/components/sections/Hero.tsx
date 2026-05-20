@@ -4,8 +4,6 @@ import GlowLink from "@/components/shared/GlowLink";
 import LinkButton from "../shared/LinkButton";
 
 export default function Hero({ data }: { data: Resume }) {
-  const telHref = `tel:${data.phone.replace(/\s/g, "")}`;
-
   return (
     <section className="border-b py-14">
       <div className="mx-auto w-full max-w-5xl px-4">
@@ -30,10 +28,6 @@ export default function Hero({ data }: { data: Resume }) {
             external={false}
           >
             Email
-          </LinkButton>
-
-          <LinkButton href={telHref} variant="radial" external={false}>
-            Call
           </LinkButton>
 
           <GlowLink href={data.links.linkedin} label="LinkedIn" />

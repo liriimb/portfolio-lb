@@ -3,7 +3,6 @@ export const resume = {
   title: "Full Stack Developer",
   location: "Skopje, North Macedonia",
   email: "lirim.bajram@outlook.com",
-  phone: "+389 070 633 398",
   links: {
     github: "https://github.com/liriimb",
     linkedin: "https://www.linkedin.com/in/lirimbajrami/",

@@ -28,19 +28,6 @@ export default function Contact({ data }: { data: Resume }) {
               </div>
               <CopyButton text={data.email} />
             </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border p-4">
-              <div>
-                <p className="text-xs text-muted-foreground">Phone</p>
-                <a
-                  className="mt-1 inline-block text-sm font-medium underline-offset-4 hover:underline"
-                  href={`tel:${data.phone.replace(/\s/g, "")}`}
-                >
-                  {data.phone}
-                </a>
-              </div>
-              <CopyButton text={data.phone} />
-            </div>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
